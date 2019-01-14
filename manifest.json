@@ -1,0 +1,25 @@
+{
+  "name": "Content adder",
+  "author": "Alstof",
+  "description": "Add data to the page from key-value pairs",
+  "version": "1.0",
+  "icons": {
+    "16": "images/add-data-16.png",
+    "24": "images/add-data-32.png",
+    "48": "images/add-data-48.png"
+  },
+  "permissions": ["*://*/*", "tabs"],
+  "browser_action": {
+    "default_icon": "images/add-data-48.png",
+    "default_title": "Data mapper",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://einvoice.microsoft.com/**"],
+      "js": ["js/content.js"],
+      "css": ["css/styles.css"]
+    }
+  ],
+  "manifest_version": 2
+}
